@@ -1,0 +1,6 @@
+c:\users\гайткулов альберт\documents\visual studio 2015\Projects\T9Spelling\T9Spelling\bin\Debug\T9Spelling.exe.config
+C:\Users\Гайткулов Альберт\documents\visual studio 2015\Projects\T9Spelling\T9Spelling\bin\Debug\T9Spelling.exe
+C:\Users\Гайткулов Альберт\documents\visual studio 2015\Projects\T9Spelling\T9Spelling\bin\Debug\T9Spelling.pdb
+C:\Users\Гайткулов Альберт\documents\visual studio 2015\Projects\T9Spelling\T9Spelling\obj\Debug\T9Spelling.csprojResolveAssemblyReference.cache
+C:\Users\Гайткулов Альберт\documents\visual studio 2015\Projects\T9Spelling\T9Spelling\obj\Debug\T9Spelling.exe
+C:\Users\Гайткулов Альберт\documents\visual studio 2015\Projects\T9Spelling\T9Spelling\obj\Debug\T9Spelling.pdb
