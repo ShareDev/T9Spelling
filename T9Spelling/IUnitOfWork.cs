@@ -1,6 +1,6 @@
 ﻿namespace T9Spelling
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
         IConverter Converter { get; }
     }

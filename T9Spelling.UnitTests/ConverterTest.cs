@@ -5,14 +5,20 @@ namespace T9Spelling.UnitTests
     [TestClass]
     public class ConverterTest
     {
+        private readonly IUnitOfWork _unitOfWork;
+
+        public ConverterTest()
+        {
+            _unitOfWork = new UnitOfWork();
+        }
+
         [TestMethod]
         public void ConvertStringToNumbersTest()
         {
             // arrange
             var inputString = "hello world";
-            var converter = new StringConverter();
             // act
-            var outputString = converter.Convert(inputString);
+            var outputString = _unitOfWork.Converter.Convert(inputString);
             // assert
             Assert.AreEqual(outputString.ToString(), "4433555 555666096667775553");
         }
@@ -22,9 +28,8 @@ namespace T9Spelling.UnitTests
         {
             // arrange
             var inputString = "h";
-            var converter = new StringConverter();
             // act
-            var outputString = converter.Convert(inputString);
+            var outputString = _unitOfWork.Converter.Convert(inputString);
             // assert
             Assert.AreEqual(outputString.ToString(), "The string length very short. It should be greater than 1 and less than 15 characters");
         }
@@ -34,9 +39,8 @@ namespace T9Spelling.UnitTests
         {
             // arrange
             var inputString = "4";
-            var converter = new StringConverter();
             // act
-            var outputString = converter.Convert(inputString);
+            var outputString = _unitOfWork.Converter.Convert(inputString);
             // assert
             Assert.AreEqual(outputString.ToString(), "Please, enter not numeric characters");
         }

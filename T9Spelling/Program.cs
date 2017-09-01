@@ -4,10 +4,21 @@ namespace T9Spelling
 {
     class Program
     {
+        private readonly IUnitOfWork _unitOfWork;
+
+        private Program()
+        {
+            _unitOfWork = new UnitOfWork();
+        }
+
         static void Main(string[] args)
         {
-            IConverter converter = new StringConverter();
+            Program program = new Program();
+            program.ConvertStringToNumbers();
+        }
 
+        private void ConvertStringToNumbers()
+        {
             Console.WriteLine("Please, write your cases count");
             var countOfCases = Console.ReadLine();
 
@@ -16,7 +27,7 @@ namespace T9Spelling
                 Console.WriteLine("Please, write your message");
                 var inputString = Console.ReadLine();
 
-                var result = converter.Convert(inputString);
+                var result = _unitOfWork.Converter.Convert(inputString);
 
                 Console.WriteLine($"Case #{i}: {result}");
             }
