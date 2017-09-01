@@ -6,7 +6,7 @@ namespace T9Spelling
     {
         static void Main(string[] args)
         {
-            var converter = new StringConverter();
+            IConverter converter = new StringConverter();
 
             Console.WriteLine("Please, write your cases count");
             var countOfCases = Console.ReadLine();
