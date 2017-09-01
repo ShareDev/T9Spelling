@@ -27,9 +27,12 @@ namespace T9Spelling
                 Console.WriteLine("Please, write your message");
                 var inputString = Console.ReadLine();
 
-                var result = _unitOfWork.Converter.Convert(inputString);
+                if (inputString != null)
+                {
+                    var result = _unitOfWork.Converter.Convert(inputString.ToLower());
 
-                Console.WriteLine($"Case #{i}: {result}");
+                    Console.WriteLine($"Case #{i}: {result}");
+                }
             }
 
             Console.WriteLine("Please, press enter for exit...");

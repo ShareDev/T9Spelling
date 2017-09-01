@@ -16,9 +16,9 @@ namespace T9Spelling.UnitTests
         public void ConvertStringToNumbersTest()
         {
             // arrange
-            var inputString = "hello world";
+            var inputString = "Hello world";
             // act
-            var outputString = _unitOfWork.Converter.Convert(inputString);
+            var outputString = _unitOfWork.Converter.Convert(inputString.ToLower());
             // assert
             Assert.AreEqual(outputString.ToString(), "4433555 555666096667775553");
         }
